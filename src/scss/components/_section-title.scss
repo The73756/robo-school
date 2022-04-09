@@ -1,0 +1,19 @@
+.section-title {
+  margin: 0;
+  margin-bottom: 60px;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 160%;
+  color: var(--dark-color);
+
+  @include small-tablet {
+    line-height: 60px;
+  }
+
+  @include mobile {
+    margin-bottom: 40px;
+    font-size: 30px;
+    line-height: 140%;
+    text-align: center;
+  }
+}

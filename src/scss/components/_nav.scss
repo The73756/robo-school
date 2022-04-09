@@ -1,0 +1,56 @@
+.nav {
+  &__list {
+    @include flex-v-center;
+
+    @include hight-tablet {
+      @include flex-all-center;
+
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 40px;
+
+      @include hight-tablet {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    color: var(--light-color);
+
+    @include hight-tablet {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 160%;
+    }
+  }
+
+  @include hight-tablet {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+}
+
+.menu--active {
+  opacity: 1;
+  visibility: visible;
+}

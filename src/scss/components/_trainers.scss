@@ -1,0 +1,109 @@
+.trainers {
+  &__wrapper {
+    padding-left: max(15px, calc((100% - var(--content-width)) / 2));
+  }
+
+  &__content {
+    margin-bottom: 75px;
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  .swiper-slide {
+    width: 360px;
+
+    @include small-tablet {
+      width: 220px;
+    }
+  }
+
+  .swiper-scrollbar-drag {
+    background-color: var(--dark-color);
+  }
+
+  &__image {
+    margin-bottom: 20px;
+    border-radius: 20px;
+    max-height: 500px;
+
+    @include mobile {
+      max-height: 306px;
+    }
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 160%;
+    color: var(--dark-color);
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__post {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--text-color);
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__btn {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--accent-color);
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__nav {
+    @include flex-all-sb;
+  }
+
+  &__scroll {
+    border-radius: 40px;
+    width: 360px;
+    height: 5px;
+    background-color: rgb(20 16 36 / 8%);
+  }
+
+  &__btns {
+    @include flex-v-center;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__slider-btn {
+    @include bg-cover;
+
+    width: 40px;
+    height: 40px;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &--prev {
+      background-image: url("../img/prev.svg");
+    }
+
+    &--next {
+      background-image: url("../img/next.svg");
+    }
+  }
+}
